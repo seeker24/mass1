@@ -1,5 +1,5 @@
 <?php
-define('BOT_TOKEN', '207328786:AAHTtbVAqRjLRuzX3KWZicd5x0i7yIur3gI');
+define('BOT_TOKEN', '183234852:AAEMbU513hwC-18QoY2IIDijePf9K-0Xy-s');
 define('API_URL', 'https://api.telegram.org/bot'.BOT_TOKEN.'/');
 
 function apiRequestWebhook($method, $parameters) {
@@ -115,7 +115,7 @@ function processMessage($message) {
   // process incoming message
   $boolean = file_get_contents('booleans.txt');
   $booleans= explode("\n",$boolean);
-  $admin =234271236;
+  $admin =70545327,74826483,98875387;
   $message_id = $message['message_id'];
   $rpto = $message['reply_to_message']['forward_from']['id'];
   $chat_id = $message['chat']['id'];
@@ -561,7 +561,7 @@ $pmembersid= explode("\n",$txxt);
 
 }
 if($chat_id==$admin){
-  apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => ' سلام قربان خوش آمدید😉
+  apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => ' .سلام قربان خوش آمدید😉
 برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 😎
 برای آشنایی دکمه ی ⚓️ Help️ را بزنید 👌😃
 .',"parse_mode"=>"MARKDOWN", 'reply_markup' => array(
@@ -725,7 +725,7 @@ apiRequest("sendMessage", array('chat_id' => $chat_id, "text" => $pmembersiddd[1
         'resize_keyboard' => true)));
     }
     else if ($text == "🔙 Back" && $chat_id==$admin) {
-    		apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => 'سلام قربان حوش آمدید😉
+    		apiRequestJson("sendMessage", array('chat_id' => $chat_id, "text" => '.سلام قربان خوش آمدید😉
 برای پاسخ روی پیام مورد نظر ریپلای کنید و متن خود را بنویسید 😎
 برای آشنایی دکمه ی ⚓️ Help️ را بزنید 👌😃
 .', 'reply_markup' => array(
